@@ -15,4 +15,5 @@ hs_err_pid*
 /config.xml
 /bin
 !/lib/snowball.jar
+target
 
