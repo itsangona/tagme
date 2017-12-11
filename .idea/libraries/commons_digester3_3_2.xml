@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="commons-digester3-3.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/commons-digester3-3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
