@@ -20,8 +20,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
+import org.slf4j.Logger;
 
 import it.acubelab.Chars;
 import it.acubelab.ExternalSort;
@@ -37,11 +39,12 @@ import it.unimi.dsi.lang.MutableString;
 import it.unimi.dsi.logging.ProgressLogger;
 import it.unimi.dsi.webgraph.ArcListASCIIGraph;
 import it.unimi.dsi.webgraph.BVGraph;
+import org.slf4j.LoggerFactory;
 
 
 public class WikipediaInGraph extends Indexer {
 
-	static Logger log=Logger.getLogger(WikipediaInGraph.class);
+	static Logger log= LoggerFactory.getLogger(WikipediaInGraph.class);
 	final static String NAME="in_graph";	
 
 
@@ -61,7 +64,7 @@ public class WikipediaInGraph extends Indexer {
 		FastBufferedReader in = new FastBufferedReader(new InputStreamReader(new FileInputStream(edges)));
 		File tmp1=Dataset.createTmpFile();
 		FastBufferedWriter out = new FastBufferedWriter(tmp1);
-		PLogger plog= new PLogger(log).start("Reversing edges...");
+		PLogger plog= new PLogger((org.apache.log4j.Logger)log).start("Reversing edges...");
 
 		MutableString buffer = new MutableString(256);
 		while(in.readLine(buffer)!=null){
@@ -88,7 +91,7 @@ public class WikipediaInGraph extends Indexer {
 		log.info("Storing optmized graph...");
 		ProgressLogger logger;
 		ArcListASCIIGraph tmp_graph = ArcListASCIIGraph.loadOnce(new FileInputStream(tmp2.getAbsolutePath()));
-		logger=new ProgressLogger(log,ProgressLogger.TEN_SECONDS);
+		logger=new ProgressLogger(log,ProgressLogger.TEN_SECONDS, TimeUnit.SECONDS);
 		BVGraph.store(tmp_graph, new File(workingDir,NAME).getAbsolutePath(),logger);
 
 		log.info("Graph built");

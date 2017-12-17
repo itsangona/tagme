@@ -22,8 +22,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 import it.acubelab.Chars;
 import it.acubelab.tagme.config.TagmeConfig;
@@ -40,7 +44,7 @@ import it.unimi.dsi.webgraph.NodeIterator;
 
 public class WikipediaGraph extends Indexer {
 
-	static Logger log= Logger.getLogger(WikipediaGraph.class);
+	static Logger log= LoggerFactory.getLogger(WikipediaGraph.class);
 	final static String NAME="graph";
 	
 	
@@ -62,7 +66,7 @@ public class WikipediaGraph extends Indexer {
 		log.info("Storing optmized graph...");
 		ProgressLogger logger;
 		ArcListASCIIGraph tmp_graph= ArcListASCIIGraph.loadOnce(new FileInputStream(edges));
-		logger=new ProgressLogger(log,ProgressLogger.TEN_SECONDS);
+		logger=new ProgressLogger(log,ProgressLogger.TEN_SECONDS, TimeUnit.SECONDS);
 		BVGraph.store(tmp_graph, new File(workingDir,NAME).getAbsolutePath(),logger);
 		log.info("Nodes: "+tmp_graph.numNodes());
 		log.info("Graph built");

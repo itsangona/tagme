@@ -6,12 +6,11 @@
 	*****************************************
 -->
 <tagme>
-	<logConfiguration>/your/project/path/log4j.xml</logConfiguration>
-	<stopword>/your/project/path/stopwords/</stopword>
-	<repository>/your/project/path/repository/</repository>
+	<logConfiguration>H:/tagme/log4j.xml</logConfiguration>
+	<stopword>H:/tagme/stopwords/</stopword>
+	<repository>H:/tagme/en/source/wiki20171215.dump</repository>
 
 	<langs>
-		<lang>it</lang>
 		<lang>en</lang>
 	</langs>
 
