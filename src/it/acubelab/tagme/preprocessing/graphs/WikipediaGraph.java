@@ -22,12 +22,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.concurrent.TimeUnit;
 
-//import org.apache.log4j.Logger;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import org.apache.log4j.Logger;
 
 import it.acubelab.Chars;
 import it.acubelab.tagme.config.TagmeConfig;
@@ -44,36 +40,36 @@ import it.unimi.dsi.webgraph.NodeIterator;
 
 public class WikipediaGraph extends Indexer {
 
-	static Logger log= LoggerFactory.getLogger(WikipediaGraph.class);
+	static Logger log= Logger.getLogger(WikipediaGraph.class);
 	final static String NAME="graph";
-	
-	
+
+
 	public WikipediaGraph() {
-		
+
 	}
 
 	@Override
 	public void makeIndex(String lang, File workingDir) throws IOException {
-		
-		log.info("Perform a graph build for language "+lang);
-		
-		log.info("Loading egdes...");
-		
-		File edges=new WikipediaEdges(lang).getFile();
-		
 
-		
+		log.info("Perform a graph build for language "+lang);
+
+		log.info("Loading egdes...");
+
+		File edges=new WikipediaEdges(lang).getFile();
+
+
+
 		log.info("Storing optmized graph...");
 		ProgressLogger logger;
 		ArcListASCIIGraph tmp_graph= ArcListASCIIGraph.loadOnce(new FileInputStream(edges));
-		logger=new ProgressLogger(log,ProgressLogger.TEN_SECONDS, TimeUnit.SECONDS);
+		logger=new ProgressLogger(log,ProgressLogger.TEN_SECONDS);
 		BVGraph.store(tmp_graph, new File(workingDir,NAME).getAbsolutePath(),logger);
 		log.info("Nodes: "+tmp_graph.numNodes());
 		log.info("Graph built");
-		
-	
+
+
 	}
-	
+
 
 	@Override
 	public File getIndexDir(String lang) {

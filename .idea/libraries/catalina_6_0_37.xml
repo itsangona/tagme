@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="slf4j-log4j12-1.7.25">
+  <library name="catalina-6.0.37">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/slf4j-log4j12-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ext_lib/catalina-6.0.37.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
