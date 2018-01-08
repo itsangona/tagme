@@ -9,7 +9,9 @@ public class AIDACoNLLTest {
     public static void main(String[] args) {
         File tsv = new File("H:\\DATASET\\aida-yago2-dataset\\aida-yago2-dataset\\AIDA-YAGO2-dataset.tsv");  // tSV文件路径
         ReadFile rd = new ReadFile();
-        rd.readAll(tsv);
+        String text = rd.getToken(tsv);
+        System.out.println(text);
+        //rd.readFirstLine(tsv);
         /*BufferedReader br = null;
         try
         {
