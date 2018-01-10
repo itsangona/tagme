@@ -1,37 +1,17 @@
-package dataset.AIDA_CoNLL;
+package dataset.IITB;
+
 
 import java.io.*;
-import java.util.*;
-
-import dataset.file.ReadFile;
 
 
-import it.acubelab.tagme.AnnotatedText;
-import it.acubelab.tagme.Annotation;
-import it.acubelab.tagme.Disambiguator;
-import it.acubelab.tagme.RelatednessMeasure;
-import it.acubelab.tagme.RhoMeasure;
-import it.acubelab.tagme.Segmentation;
-import it.acubelab.tagme.TagmeParser;
-import it.acubelab.tagme.config.TagmeConfig;
-import it.acubelab.tagme.preprocessing.TopicSearcher;
-
-
-public class AIDACoNLLTest {
-
+public class IITBTest {
     public static void main(String[] args) throws IOException {
-        File tsv = new File("/media/cifs_dragon/uqwzha10/dataset/AIDA-YAGO2-dataset.tsv");  // tSV文件路径
-        //File tsv = new File("H:\\DATASET\\aida-yago2-dataset\\aida-yago2-dataset\\AIDA-YAGO2-dataset.tsv");  // tSV文件路径
+        /*File tsv = new File("/media/cifs_dragon/uqwzha10/dataset/AIDA-YAGO2-dataset.tsv");  // tSV文件路径
         ReadFile rd = new ReadFile();
         List<String> text = rd.getToken(tsv);
-        //System.out.println(text);
-        List<String> testB = new ArrayList<>();
-        for (int i = 273308; i < text.size(); i++) {
-             testB.add(text.get(i));
-        }
-        //System.out.println(testB.get(0));
-        //System.out.println(testB.size());
-        String test = testB.toString();
+
+
+        String test = text.toString();
         //System.out.println("line:" + text.size());
         TagmeConfig.init();
 
@@ -61,6 +41,6 @@ public class AIDACoNLLTest {
                 System.out.println("Wikipedia Page: "
                         + searcher.getTitle(a.getTopic()));
             }
-        }
+        }*/
     }
 }

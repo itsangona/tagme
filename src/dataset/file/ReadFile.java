@@ -1,13 +1,11 @@
-package dataset.readfile;
+package dataset.file;
 
 import java.io.*;
-import java.nio.Buffer;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+
+import java.util.Arrays;
 
 
 public class ReadFile {
@@ -67,12 +65,12 @@ public class ReadFile {
 
                 everyLine = line.split("\t")[0];
 
-                System.out.println(everyLine);
+                // System.out.println(everyLine);
                 //System.out.println("tokn"+k);
                 allString.add(everyLine);
-                k++;
+
             }
-            System.out.println(allString.get(10));
+            //System.out.println("llllllll"+allString.get(10));
             /*for (int i = 0; i < allString.size(); i++) {
                 text += allString.get(i).toString();
             }*/
@@ -86,5 +84,31 @@ public class ReadFile {
             e.printStackTrace();
         }
         return allString;
+    }
+
+    public void readMultiFiles() {
+        String path = "";
+        File file = new File(path);
+        File[] files = file.listFiles();
+        Arrays.sort(files);
+        try {
+            for (int i = 0; i < files.length; i++) {
+                if (files[i].isFile()) {
+                    InputStreamReader reader = new InputStreamReader(new FileInputStream(files[i]));
+                    BufferedReader br = new BufferedReader(reader);
+                    String line = "";
+                    line = br.readLine();
+                    while (line != null) {
+                        System.out.println(files[i].getName() + ": " + line);
+                        line = br.readLine();
+                    }
+                    br.close();
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
