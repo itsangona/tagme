@@ -1,0 +1,49 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="tagmeIITB:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/tagmeIITB_jar</output-path>
+    <root id="archive" name="tagme.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/dataset/IITB/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="tagme" />
+      <element id="library" level="project" name="commons-beanutils-1.9.3" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/lucene-core-3.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ext_lib/servlet-api-2.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-collections-3.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/preproc_lib/mailapi-1.4.3.jar" path-in-jar="/" />
+      <element id="library" level="project" name="servlet-api-6.0.37" />
+      <element id="library" level="project" name="mail" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/sux4j-3.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/snowball.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-beanutils-1.8.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ext_lib/catalina-6.0.53.jar" path-in-jar="/" />
+      <element id="library" level="project" name="tomcat-catalina-9.0.2 (2)" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-logging-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/JSAP-2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/log4j-1.2.16.jar" path-in-jar="/" />
+      <element id="library" level="project" name="log4j-api-2.10.0" />
+      <element id="library" level="project" name="commons-digester3-3.2" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/preproc_lib/smtp-1.4.4.jar" path-in-jar="/" />
+      <element id="library" level="project" name="commons-discovery-0.2" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/ant-1.6.5.jar" path-in-jar="/" />
+      <element id="library" level="project" name="commons-collections4-4.1" />
+      <element id="library" level="project" name="smtp-1.6.0" />
+      <element id="library" level="project" name="log4j-over-slf4j-1.7.25" />
+      <element id="library" level="project" name="commons-configuration2-2.2" />
+      <element id="library" level="project" name="commons-codec-1.11" />
+      <element id="library" level="project" name="tomcat-catalina-9.0.2" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-configuration-1.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-io-2.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-digester3-3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/dsiutils-2.0.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-lang-2.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/json-20131018.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/webgraph-3.0.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/fastutil-6.4.1.jar" path-in-jar="/" />
+      <element id="library" level="project" name="dsiutils-2.4.2" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-codec-1.5.jar" path-in-jar="/" />
+      <element id="library" level="project" name="servlet-api-6.0.37 (2)" />
+      <element id="library" level="project" name="catalina-6.0.37" />
+    </root>
+  </artifact>
+</component>

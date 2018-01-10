@@ -86,29 +86,31 @@ public class ReadFile {
         return allString;
     }
 
-    public void readMultiFiles() {
-        String path = "";
+    public List<String> readMultiFiles(String path) {
         File file = new File(path);
+        //File[] tempList = file.listFiles();
         File[] files = file.listFiles();
-        Arrays.sort(files);
+        List<String> allString = new ArrayList<>();
+
         try {
             for (int i = 0; i < files.length; i++) {
                 if (files[i].isFile()) {
                     InputStreamReader reader = new InputStreamReader(new FileInputStream(files[i]));
                     BufferedReader br = new BufferedReader(reader);
                     String line = "";
-                    line = br.readLine();
-                    while (line != null) {
-                        System.out.println(files[i].getName() + ": " + line);
-                        line = br.readLine();
+                    while ((line = br.readLine()) != null) {
+                        allString.add(line);
+                        //System.out.println(files[i].getName() + ": " + allString);
                     }
                     br.close();
                 }
             }
+            //System.out.println(allString);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return allString;
     }
 }
